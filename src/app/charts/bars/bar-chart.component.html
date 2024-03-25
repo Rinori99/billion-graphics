@@ -1,0 +1,22 @@
+<div class="chart" [style.width.px]="width" [style.height.px]="height">
+    <div class="y-axis">
+        <div *ngFor="let val of [maxNetWorth, 4*maxNetWorth/5, 4*maxNetWorth/5, 2*maxNetWorth/5, maxNetWorth/5, 0]">{{ val | money }}</div>
+    </div>
+    <div class="graph">
+        <div class="bar" [ngClass]="{
+            'bar-very-narrow': width < 300,
+            'bar-narrow': width >= 300 && width < 600,
+            'bar-medium': width >= 600 && width < 1000,
+            'bar-wide': width >= 1000
+        }"  
+            *ngFor="let person of richestPeople" [style.height.%]="person.relativeNetWorthScore" (click)="openWikipediaPage(person)">
+            <div class="net-worth">
+                {{ person.netWorth | money }}
+            </div>
+            <div class="bar-person">
+                <div>{{ person.firstName }}</div>
+                <div>{{ person.lastName }}</div>
+            </div>
+        </div>
+    </div>
+</div>

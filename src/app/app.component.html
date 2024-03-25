@@ -1,0 +1,11 @@
+<main class="main">
+  <div class="header">
+    <h1>BillionCharts.com</h1>
+  </div>
+  <div class="content">
+    <div class="chart-wrapper">
+      <div class="chart-title">Top 10 Richest People in the World as of {{ currentMonth | month }}, {{ currentYear }}</div>
+      <bar-chart [width]="chartWidth" [height]="chartHeight"></bar-chart>
+    </div>
+  </div>
+</main>

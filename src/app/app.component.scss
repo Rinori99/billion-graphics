@@ -1,0 +1,53 @@
+.main {
+    background-size: 40px 40px;
+    background-image:
+    linear-gradient(to right, #c4e1f5 1px, transparent 1px),
+    linear-gradient(to bottom, #c4e1f5 1px, transparent 1px);
+}
+
+.header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-family: 'GT America Trial', sans-serif;
+        color: #4C8AC8;
+    }
+}
+
+.content {
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-wrapper {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.chart-title {
+    margin: 10px;
+    font-family: helvetica;
+    opacity: 0.5;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .main {
+        background-image: none;
+    }
+
+    .chart-wrapper {
+        box-shadow: none;
+    }
+}
